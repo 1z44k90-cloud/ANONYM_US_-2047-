@@ -36,3 +36,10 @@ The agent works on a dedicated feature/docs branch. The prompt must never instru
 
 ## Completion rule
 A prompt is complete only when its acceptance criteria and required tests pass and the handoff is documented.
+
+## Standard templates
+- `08_AGENT_TASK_TEMPLATE.md` — copy this for new implementation/documentation tasks.
+- `05_HANDOFF.md` — required closing/handoff structure.
+- `06_REVIEW_CHECKLIST.md` — pre-merge review checklist.
+- `07_PHASE_TRANSITION.md` — phase completion/transition procedure.
+- `09_REPOSITORY_CONSISTENCY_AUDIT.md` — periodic consistency audit.
