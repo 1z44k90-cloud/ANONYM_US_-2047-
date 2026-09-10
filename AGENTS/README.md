@@ -9,7 +9,8 @@ This directory contains the rules that coordinate human and AI development of AN
 3. `DECISIONS.md` — decisions that are currently authoritative.
 4. `TASK_PROTOCOL.md` — how work must be performed.
 5. `CODING_RULES.md` — implementation constraints.
-6. `PROMPTS/<task>.md` — exact scope of the assigned task.
+6. `WORKFLOW.md` — end-to-end issue/branch/PR workflow.
+7. `PROMPTS/<task>.md` — exact scope of the assigned task.
 
 ## Core principle
 **The repository must be understandable without the chat that created it.**
@@ -25,4 +26,5 @@ Conversation can provide intent and clarification, but durable project knowledge
 - Decisions: `DECISIONS.md`
 - Task protocol: `TASK_PROTOCOL.md`
 - Coding rules: `CODING_RULES.md`
+- Workflow: `WORKFLOW.md`
 - Task prompts: `PROMPTS/`
