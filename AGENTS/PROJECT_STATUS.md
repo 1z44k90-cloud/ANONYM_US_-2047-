@@ -9,7 +9,7 @@ Single visible status board for the project. Any agent must read this file befor
 ### Phase state
 - Status: 🔄 ACTIVE
 - Objective: establish a stable development process, technical foundation and playable prototype path.
-- Current priority: finalize the development protocol and technical stack before building large systems.
+- Current priority: resolve the technical stack and then begin the smallest executable foundation.
 - Current blockers: technical stack decision is pending.
 
 ## Phases
@@ -26,17 +26,17 @@ Single visible status board for the project. Any agent must read this file befor
 | FASE 7 — RELEASE | ⏳ PENDING | Packaging, QA, deployment and release preparation. |
 
 ## Active work
-1. Formalize agent workflow and branch policy.
-2. Maintain documentation as the source of truth.
-3. Resolve the technical stack decision.
-4. Then implement the smallest playable foundation.
+1. Development governance and agent documentation — prepared on `docs/agent-development-system`.
+2. Technical stack decision — next implementation decision.
+3. After stack approval: executable project shell and player movement.
 
 ## Next task
-**Resolve technical stack for the browser-first vertical slice.**
+**TASK 01 — DEFINIR STACK TÉCNICO DEL PROTOTIPO** (`AGENTS/PROMPTS/01_FOUNDATION_STACK.md`)
 
-Candidate under evaluation: Phaser + TypeScript.
+Current candidate: Phaser + TypeScript. This is a candidate, not yet an approved architectural decision.
 
-The stack must be documented in `TECH/ARCHITECTURE.md` and `AGENTS/DECISIONS.md` before major implementation begins.
+## Dependencies
+`TASK 01` must be resolved before `TASK 02 — PLAYER MOVEMENT`.
 
 ## Definition of Done for FASE 1
 - Agent workflow documented.
