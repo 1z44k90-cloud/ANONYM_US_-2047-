@@ -3,20 +3,7 @@
 All official agent task prompts must be Markdown (`.md`) files stored in this directory.
 
 ## Required prompt structure
-
-Every task prompt should contain:
-
-1. Objective
-2. Context
-3. Required reading
-4. Allowed files
-5. Forbidden files
-6. Preconditions
-7. Implementation task
-8. Acceptance criteria
-9. Tests
-10. Documentation updates
-11. Handoff
+Every task prompt should contain Objective, Context, Required reading, Allowed files, Forbidden files, Preconditions, Implementation task, Acceptance criteria, Tests, Documentation updates and Handoff.
 
 ## Naming
 Use `NN_SYSTEM_TASK.md`.
@@ -56,3 +43,9 @@ Agents work on dedicated feature/docs branches and never directly on `main`.
 - `25_DOCUMENTATION_AUDIT.md` — documentation governance audit.
 - `26_GOVERNANCE_COMPLETE.md` — governance completion checkpoint.
 - `27_GOVERNANCE_REVIEW.md` — final governance review.
+- `28_DOCUMENTATION_RELEASE.md` — documentation release checkpoint.
+- `29_NO_DIRECT_MAIN.md` — main branch protection.
+- `30_DONE_DEFINITION.md` — universal definition of done.
+- `31_DOCUMENTATION_GOVERNANCE.md` — documentation governance.
+- `32_AGENT_HANDOFF.md` — mandatory handoff.
+- `33_DOCUMENTATION_SYNC.md` — documentation synchronization.
