@@ -39,6 +39,13 @@ This is the architectural and process decision log. Decisions recorded here are 
 - Reason: preserve the game's design while preventing real-world operational functionality.
 - Consequence: no real unauthorized-access or malware functionality belongs in the game code.
 
+## DEC-007 — User authorization for project-governance decisions
+- Status: ACTIVE
+- Decision: the assistant may make reasonable, reversible decisions that improve the completion and internal consistency of the GitHub documentation/governance system without requesting separate approval for every minor documentation choice.
+- Scope: documentation structure, prompt organization, status-board conventions, agent workflow wording, review/handoff templates and similar project-governance details.
+- Constraint: this authority does not permit silently changing core game canon, major technical architecture, scope, story outcomes or other substantive product decisions; those remain subject to the normal decision/conflict protocol.
+- Reason: avoid unnecessary interruption while designing the project's documentation system.
+
 ## Decision template
 For future decisions use:
 
