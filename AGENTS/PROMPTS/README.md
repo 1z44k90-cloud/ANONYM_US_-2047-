@@ -38,8 +38,23 @@ The agent works on a dedicated feature/docs branch. The prompt must never instru
 A prompt is complete only when its acceptance criteria and required tests pass and the handoff is documented.
 
 ## Standard templates
-- `08_AGENT_TASK_TEMPLATE.md` — copy this for new implementation/documentation tasks.
+- `00_AGENT_BOOTSTRAP.md` — enter/review project context before work.
 - `05_HANDOFF.md` — required closing/handoff structure.
 - `06_REVIEW_CHECKLIST.md` — pre-merge review checklist.
 - `07_PHASE_TRANSITION.md` — phase completion/transition procedure.
+- `08_AGENT_TASK_TEMPLATE.md` — copy this for new implementation/documentation tasks.
 - `09_REPOSITORY_CONSISTENCY_AUDIT.md` — periodic consistency audit.
+- `10_ISSUE_TO_PROMPT_WORKFLOW.md` — issue-to-agent-task workflow.
+- `11_DOCUMENTATION_CHANGE.md` — documentation-only changes.
+- `12_BUGFIX.md` — controlled bug fixes.
+- `13_FEATURE.md` — bounded feature implementation.
+- `14_TEST_AND_REGRESSION.md` — test/regression work.
+- `15_ARCHITECTURE_CHANGE.md` — architecture changes.
+- `16_RELEASE_READINESS.md` — release readiness checks.
+- `17_AGENT_RESEARCH.md` — research before a decision.
+- `18_DATA_CONTENT.md` — data-driven content.
+- `19_SAVE_STATE.md` — persistence.
+- `20_INTEGRATION.md` — system integration.
+- `21_SCOPE_REVIEW.md` — scope review.
+- `22_PRE_MERGE.md` — pre-merge validation.
+- `23_CHANGELOG.md` — meaningful project history.
