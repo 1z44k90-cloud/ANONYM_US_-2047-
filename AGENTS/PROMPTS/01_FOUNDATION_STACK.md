@@ -1,12 +1,16 @@
 # TASK 01 — DEFINIR STACK TÉCNICO DEL PROTOTIPO
 
 ## Objective
-Select and document the technical stack for the browser-first vertical slice of ANONYM_US_<2047>.
+Select and document the technical stack for the browser-capable vertical slice of ANONYM_US_<2047>.
 
 ## Context
-The game is a hybrid 2D/top-down world plus terminal/CRT interface. The prototype must be fast to iterate, easy for AI agents to maintain, lightweight enough for the target development machine, and suitable for a future desktop/mobile path.
+The project direction has been refined after pre-production review. The game is now conceived as a **stylized post-apocalyptic sandbox with procedural worlds generated from seeds**, inspired by advanced contemporary cities rather than tied to a single real-world city. The world may contain futuristic infrastructure that continues operating after civilization's collapse, including systems influenced by SYNAPSE.
 
-The repository already defines a modular architecture and requires the terminal to remain a closed fictional simulation.
+The target visual direction is simple, distinctive and scalable rather than photorealistic: think low-poly / stylized 3D as a candidate, with strong atmosphere and systemic depth. The game also contains a fictional terminal/CRT layer representing the machine world.
+
+The prototype must be fast to iterate, easy for AI agents to maintain, lightweight enough for the target development machine, and capable of scaling from a small generated test area to larger seeded worlds if the vertical slice succeeds.
+
+The repository requires the terminal to remain a closed fictional simulation.
 
 ## Required reading
 - `AGENTS/MASTER_CONTEXT.md`
@@ -31,22 +35,32 @@ The repository already defines a modular architecture and requires the terminal 
 
 ## Preconditions
 - The project architecture has been reviewed.
+- The procedural seeded-world direction is now part of the design target.
 - The vertical-slice scope remains small.
 - Candidate stacks are evaluated against actual project needs, not generic popularity.
 
 ## Task
-Evaluate the leading options (including Phaser + TypeScript, Godot and Canvas + TypeScript) against:
+Evaluate at least these credible options against the project direction:
 
-1. browser-first execution;
-2. 2D/top-down development speed;
-3. terminal/CRT integration;
-4. maintainability by AI agents;
-5. state/scene/input management;
-6. performance on the prototype target;
-7. future desktop/mobile viability;
-8. dependency complexity;
-9. testing/debugging workflow;
-10. ability to scale only after the vertical slice is validated.
+1. **Godot 4.x + GDScript** with stylized 3D as the primary representation.
+2. **Phaser + TypeScript** with 2D/2.5D as the primary representation.
+3. **Three.js + TypeScript** as a browser-first custom 3D stack.
+4. **Canvas + TypeScript without a 3D engine** as a control/reference option.
+
+Evaluate:
+
+1. procedural seeded-world support;
+2. stylized 3D / low-poly viability;
+3. browser-capable execution;
+4. exploration and world streaming/scaling potential;
+5. terminal/CRT integration;
+6. maintainability by AI agents;
+7. state/scene/input management;
+8. performance on the prototype target;
+9. future desktop/mobile viability;
+10. dependency and engine complexity;
+11. testing/debugging workflow;
+12. ability to scale only after the vertical slice is validated.
 
 Choose one stack. Record the decision and rationale in `AGENTS/DECISIONS.md`, then update `TECH/ARCHITECTURE.md` with the concrete stack and implementation direction.
 
@@ -55,15 +69,18 @@ Do not implement gameplay in this task.
 ## Acceptance criteria
 - One stack is selected.
 - At least three credible options were compared.
+- The procedural seeded-world requirement is explicitly considered.
 - The decision is recorded in `AGENTS/DECISIONS.md`.
 - `TECH/ARCHITECTURE.md` contains the selected stack and why it fits this project.
 - No gameplay code was added.
 - The decision does not contradict the master context.
 
 ## Tests / verification
-- Verify the selected stack has a documented local start/build path.
-- Verify the architecture remains platform-independent at the game-logic layer.
+- Verify the selected stack has an official documented local start/build/export path.
+- Verify the selected stack can support the intended 3D/stylized direction without requiring a custom engine as the first milestone.
+- Verify the architecture keeps game logic, world-generation rules and data independent from presentation where practical.
 - Verify terminal behavior remains isolated from the host operating system.
+- Verify browser export remains a supported target, while allowing native desktop development/testing when it is technically preferable.
 
 ## Documentation updates
 Required: `AGENTS/DECISIONS.md`, `TECH/ARCHITECTURE.md`, `AGENTS/PROJECT_STATUS.md`.
