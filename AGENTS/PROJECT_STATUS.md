@@ -9,8 +9,8 @@ Single visible status board for the project. Any agent must read this file befor
 ### Phase state
 - Status: 🔄 ACTIVE
 - Objective: establish a stable development process, technical foundation and playable prototype path.
-- Current priority: resolve the technical stack and then begin the smallest executable foundation.
-- Current blockers: technical stack decision is pending.
+- Current priority: build the smallest executable Godot foundation and validate deterministic seeded 3D world generation.
+- Current blockers: executable project shell does not exist yet.
 
 ## Phases
 
@@ -18,25 +18,33 @@ Single visible status board for the project. Any agent must read this file befor
 |---|---|---|
 | FASE 0 — PRE-PRODUCCIÓN | ✅ COMPLETE | Vision, world, narrative direction and initial architecture documented. |
 | FASE 1 — FUNDACIÓN TÉCNICA | 🔄 ACTIVE | Lock workflow, stack and project foundation. |
-| FASE 2 — VERTICAL SLICE | ⏳ PENDING | Prove the core gameplay loop in a small Tijuana district. |
+| FASE 2 — VERTICAL SLICE | ⏳ PENDING | Prove the core gameplay loop in a small generated world. |
 | FASE 3 — SISTEMAS CORE | ⏳ PENDING | Expand validated gameplay systems. |
-| FASE 4 — MUNDO | ⏳ PENDING | Build the broader playable world. |
+| FASE 4 — MUNDO | ⏳ PENDING | Expand procedural world generation and runtime streaming only after validation. |
 | FASE 5 — NARRATIVA | ⏳ PENDING | Integrate full narrative, missions and character arcs. |
 | FASE 6 — POLISH | ⏳ PENDING | Performance, UX, audio, visuals, accessibility and stability. |
 | FASE 7 — RELEASE | ⏳ PENDING | Packaging, QA, deployment and release preparation. |
 
 ## Active work
-1. Development governance and agent documentation — prepared on `docs/agent-development-system`.
-2. Technical stack decision — next implementation decision.
-3. After stack approval: executable project shell and player movement.
+1. Development governance and agent documentation — integrated on `main`.
+2. TASK 01 — technical stack decision — resolved on `task/01-foundation-stack`.
+3. TASK 02 — executable Godot project shell + smallest deterministic seeded 3D test world — next.
+
+## Technical foundation
+- Engine: **Godot 4.7.2 stable**.
+- Scripting: **GDScript**.
+- Representation: **stylized low-poly 3D**.
+- World: **deterministic procedural generation from seeds**.
+- Development target: native desktop first; Web export supported and validated progressively.
+- Terminal: closed fictional simulation only.
 
 ## Next task
-**TASK 01 — DEFINIR STACK TÉCNICO DEL PROTOTIPO** (`AGENTS/PROMPTS/01_FOUNDATION_STACK.md`)
+**TASK 02 — PROJECT SHELL + SEEDED 3D FOUNDATION** (`AGENTS/PROMPTS/02_PLAYER_MOVEMENT.md`)
 
-Current candidate: Phaser + TypeScript. This is a candidate, not yet an approved architectural decision.
+TASK 02 must be updated before implementation if its old 2D assumptions conflict with DEC-008. The task should establish the executable Godot project, a small deterministic generated test area, player movement, camera and basic collision/bounds without expanding into a large world.
 
 ## Dependencies
-`TASK 01` must be resolved before `TASK 02 — PLAYER MOVEMENT`.
+`TASK 02` depends on `TASK 01` and must precede terminal/gameplay implementation.
 
 ## Definition of Done for FASE 1
 - Agent workflow documented.
