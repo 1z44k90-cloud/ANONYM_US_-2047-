@@ -6,29 +6,26 @@ All official agent task prompts must be Markdown (`.md`) files stored in this di
 
 Every task prompt should contain:
 
-1. **Objective** — exactly what must be achieved.
-2. **Context** — why the task exists and relevant project constraints.
-3. **Required reading** — master context, status, issue and related technical/design documents.
-4. **Allowed files** — files the agent may modify.
-5. **Forbidden files** — files/systems the agent must not modify without explicit approval.
-6. **Preconditions** — what must already be true before work begins.
-7. **Implementation task** — smallest useful implementation.
-8. **Acceptance criteria** — observable conditions that prove completion.
-9. **Tests** — commands or checks required before handoff.
-10. **Documentation updates** — documents that must be updated if behavior/design changes.
-11. **Handoff** — what the next agent needs to know.
+1. Objective
+2. Context
+3. Required reading
+4. Allowed files
+5. Forbidden files
+6. Preconditions
+7. Implementation task
+8. Acceptance criteria
+9. Tests
+10. Documentation updates
+11. Handoff
 
-## Prompt naming
+## Naming
 Use `NN_SYSTEM_TASK.md`.
 
-## Scope rule
-A prompt should be small enough that one agent can complete, test and document it without redesigning unrelated systems.
+## Scope
+A prompt must be small enough for one agent to complete, test and document without redesigning unrelated systems.
 
 ## Branch rule
-The agent works on a dedicated feature/docs branch. The prompt must never instruct an agent to commit directly to `main`.
-
-## Completion rule
-A prompt is complete only when its acceptance criteria and required tests pass and the handoff is documented.
+Agents work on dedicated feature/docs branches and never directly on `main`.
 
 ## Standard prompts/templates
 - `00_AGENT_BOOTSTRAP.md` — context checkpoint.
@@ -56,4 +53,6 @@ A prompt is complete only when its acceptance criteria and required tests pass a
 - `22_PRE_MERGE.md` — pre-merge validation.
 - `23_CHANGELOG.md` — project history.
 - `24_GITHUB_PR.md` — PR definition.
-- `25_DOCUMENTATION_AUDIT.md` — governance audit.
+- `25_DOCUMENTATION_AUDIT.md` — documentation governance audit.
+- `26_GOVERNANCE_COMPLETE.md` — governance completion checkpoint.
+- `27_GOVERNANCE_REVIEW.md` — final governance review.
