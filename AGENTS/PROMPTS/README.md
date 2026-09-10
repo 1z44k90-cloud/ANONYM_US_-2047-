@@ -19,14 +19,7 @@ Every task prompt should contain:
 11. **Handoff** — what the next agent needs to know.
 
 ## Prompt naming
-Use:
-
-`NN_SYSTEM_TASK.md`
-
-Examples:
-- `01_FOUNDATION_STACK.md`
-- `02_PLAYER_MOVEMENT.md`
-- `03_TERMINAL_ENGINE.md`
+Use `NN_SYSTEM_TASK.md`.
 
 ## Scope rule
 A prompt should be small enough that one agent can complete, test and document it without redesigning unrelated systems.
@@ -37,30 +30,30 @@ The agent works on a dedicated feature/docs branch. The prompt must never instru
 ## Completion rule
 A prompt is complete only when its acceptance criteria and required tests pass and the handoff is documented.
 
-## Standard templates
-- `00_AGENT_BOOTSTRAP.md` — enter/review project context before work.
+## Standard prompts/templates
+- `00_AGENT_BOOTSTRAP.md` — context checkpoint.
 - `01_FOUNDATION_STACK.md` — technical stack decision.
 - `02_PLAYER_MOVEMENT.md` — executable foundation.
 - `03_TERMINAL_ENGINE.md` — fictional terminal engine.
 - `04_VERTICAL_SLICE.md` — first complete gameplay loop.
-- `05_HANDOFF.md` — required closing/handoff structure.
-- `06_REVIEW_CHECKLIST.md` — pre-merge review checklist.
-- `07_PHASE_TRANSITION.md` — phase completion/transition procedure.
+- `05_HANDOFF.md` — handoff standard.
+- `06_REVIEW_CHECKLIST.md` — pre-merge review.
+- `07_PHASE_TRANSITION.md` — phase transition.
 - `08_AGENT_TASK_TEMPLATE.md` — reusable task template.
-- `09_REPOSITORY_CONSISTENCY_AUDIT.md` — periodic consistency audit.
-- `10_ISSUE_TO_PROMPT_WORKFLOW.md` — issue-to-agent-task workflow.
-- `11_DOCUMENTATION_CHANGE.md` — documentation-only changes.
-- `12_BUGFIX.md` — controlled bug fixes.
-- `13_FEATURE.md` — bounded feature implementation.
-- `14_TEST_AND_REGRESSION.md` — test/regression work.
-- `15_ARCHITECTURE_CHANGE.md` — architecture changes.
-- `16_RELEASE_READINESS.md` — release readiness checks.
-- `17_AGENT_RESEARCH.md` — research before a decision.
+- `09_REPOSITORY_CONSISTENCY_AUDIT.md` — consistency audit.
+- `10_ISSUE_TO_PROMPT_WORKFLOW.md` — issue-to-task flow.
+- `11_DOCUMENTATION_CHANGE.md` — documentation-only task.
+- `12_BUGFIX.md` — controlled bugfix.
+- `13_FEATURE.md` — bounded feature.
+- `14_TEST_AND_REGRESSION.md` — testing.
+- `15_ARCHITECTURE_CHANGE.md` — architecture change.
+- `16_RELEASE_READINESS.md` — release readiness.
+- `17_AGENT_RESEARCH.md` — research before decision.
 - `18_DATA_CONTENT.md` — data-driven content.
 - `19_SAVE_STATE.md` — persistence.
 - `20_INTEGRATION.md` — system integration.
 - `21_SCOPE_REVIEW.md` — scope review.
 - `22_PRE_MERGE.md` — pre-merge validation.
-- `23_CHANGELOG.md` — meaningful project history.
-- `24_GITHUB_PR.md` — pull request definition.
-- `25_DOCUMENTATION_AUDIT.md` — documentation governance audit.
+- `23_CHANGELOG.md` — project history.
+- `24_GITHUB_PR.md` — PR definition.
+- `25_DOCUMENTATION_AUDIT.md` — governance audit.
