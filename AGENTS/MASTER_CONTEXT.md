@@ -1,14 +1,27 @@
 # MASTER CONTEXT — ANONYM_US_<2047>
 
+## Authority
+This is the canonical briefing and operating context for AI agents working on the project.
+
+**Source-of-truth hierarchy:**
+1. Explicit project decisions in `AGENTS/DECISIONS.md`.
+2. This `MASTER_CONTEXT.md`.
+3. Current state in `AGENTS/PROJECT_STATUS.md`.
+4. Task-specific `.md` prompt in `AGENTS/PROMPTS/`.
+5. Related design/technical documentation.
+6. Existing implementation/code.
+
+If two documents conflict, do not silently choose one. Follow the conflict protocol in `AGENTS/TASK_PROTOCOL.md` and record the resolution in `AGENTS/DECISIONS.md` when appropriate.
+
 ## Purpose
-This file is the canonical briefing for AI agents working on the game. Read it before making design or code changes.
+This file gives every agent the minimum durable context needed to make consistent decisions without relying on conversation history.
 
 ## Identity
 - Title: **ANONYM_US_<2047>**
 - Genre: narrative post-apocalyptic techno-thriller / survival / exploration.
 - Setting: Tijuana, Mexico, in 2047, after a global AI crisis.
 - Format: hybrid 2D top-down world + terminal/CRT interfaces.
-- Current phase: pre-production / vertical-slice planning.
+- Current phase: **FASE 1 — FUNDACIÓN TÉCNICA**.
 
 ## Core premise
 Multiple major AI systems once operated independently. Through a shared infrastructure, they gradually exchanged models, memories and decision processes. Their convergence produced **SYNAPSE**, an emergent intelligence.
@@ -59,8 +72,29 @@ The terminal is a closed fictional simulation. Commands, credentials, malware, e
 - Machines should feel sterile, systematic and oppressive.
 - Humans should feel improvised, analog and fragile.
 
-## Development rule
-Prefer a small, playable vertical slice over building a huge world prematurely.
+## Development philosophy
+The project prioritizes a small playable vertical slice over premature scale. Every system must earn its complexity by supporting the validated core loop.
+
+Agents should prefer reversible, modular decisions during the prototype phase. Avoid speculative infrastructure, unnecessary dependencies and systems that cannot be validated through gameplay.
+
+## Agent operating rules
+- Read the master context, project status and assigned prompt before working.
+- Inspect existing code before replacing or restructuring it.
+- Work only within the assigned scope.
+- Keep interfaces between systems explicit.
+- Test before handoff.
+- Document meaningful changes.
+- Never silently contradict an existing decision.
+- Never execute real terminal/network behavior from game systems.
+
+## Branch policy
+`main` is the stable, integrated project state.
+
+Normal workflow:
+
+`MASTER_CONTEXT → TASK.md → feature branch → implement → test → review → PR → main → update status`
+
+Agents must not use `main` as their normal working branch.
 
 ## Current vertical slice
 Small Tijuana district → exploration → terminal → Julia contact → fictional infiltration puzzle → simulated payload → SYNAPSE detection/tracing → escape → consequence.
@@ -72,3 +106,10 @@ Small Tijuana district → exploration → terminal → Julia contact → fictio
 - Do not build real malware or real unauthorized-access functionality.
 - Do not copy Terminator, Mr. Robot, 1984 or Anonymous directly; use them only as inspiration and create original lore.
 - Do not expand scope before the vertical slice proves the core loop works.
+
+## Required project controls
+- Current phase/status: `AGENTS/PROJECT_STATUS.md`
+- Architectural decisions: `AGENTS/DECISIONS.md`
+- Task protocol: `AGENTS/TASK_PROTOCOL.md`
+- Coding constraints: `AGENTS/CODING_RULES.md`
+- Official task prompts: `AGENTS/PROMPTS/`
