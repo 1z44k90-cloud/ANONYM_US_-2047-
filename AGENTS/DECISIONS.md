@@ -46,6 +46,23 @@ This is the architectural and process decision log. Decisions recorded here are 
 - Constraint: this authority does not permit silently changing core game canon, major technical architecture, scope, story outcomes or other substantive product decisions; those remain subject to the normal decision/conflict protocol.
 - Reason: avoid unnecessary interruption while designing the project's documentation system.
 
+## DEC-008 — Foundation engine: Godot 4.7.2 + GDScript
+- Status: ACTIVE
+- Date: 2026-09-10
+- Decision: use **Godot 4.7.2 stable with GDScript** as the foundation engine for the prototype, targeting a stylized low-poly 3D world. Native desktop execution is the primary development/validation path; browser export remains a supported distribution/validation target rather than the constraint that determines the entire architecture.
+- Reason: the approved product direction now requires procedural seeded worlds and scalable 3D exploration. Godot provides a complete 3D scene/node/input/physics/rendering/audio toolset without requiring us to build an engine. It also has official Web export support, including single-threaded Web export, while native desktop remains the stronger environment for developing and profiling the 3D prototype.
+- Alternatives considered:
+  - **Phaser + TypeScript:** excellent browser-first 2D framework, but Phaser is explicitly a 2D framework and does not provide built-in 3D rendering/physics; choosing it would force a major representation compromise or additional 3D technology.
+  - **Three.js + TypeScript:** strong browser 3D rendering, but would leave substantially more game-engine responsibilities (scene/gameplay architecture, physics choices, tooling and content workflow) to the project. That increases custom infrastructure and agent-maintenance surface too early.
+  - **Canvas + TypeScript without a 3D engine:** rejected as an engine foundation because the project would need to build core 3D/rendering/game systems itself.
+- Consequences:
+  - The first playable representation is 3D low-poly/stylized, not 2D top-down.
+  - Procedural generation is treated as a first-class game system, but the first implementation must use a small bounded test world rather than an infinite world.
+  - Game rules, seed data, world-generation algorithms, mission state and terminal simulation should remain separated from presentation nodes where practical.
+  - GDScript is the project scripting language for the foundation; adding C# is not justified for the prototype, and Godot 4 C# is not compatible with Web export.
+  - Browser support must be tested explicitly as the project grows because Web export has platform-specific limitations and performance trade-offs.
+- Supersedes: the previous unapproved Phaser + TypeScript candidate recorded in `AGENTS/PROJECT_STATUS.md`.
+
 ## Decision template
 For future decisions use:
 
